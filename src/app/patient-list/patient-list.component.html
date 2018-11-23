@@ -1,0 +1,71 @@
+<div class="container py-2">
+  <form (ngSubmit)="onSubmit(BankForm)" #BankForm="ngForm"  >
+
+      <div class="col">
+          <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">Total Bottels of A+</span>
+              </div>
+            <input type="number" name="ap"  required ngModel class="form-control" value="99">
+          </div>
+        </div>
+      <div class="col">
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">Total Bottels of B+ </span>
+              </div>
+          <input type="number" name="bp"  required ngModel class="form-control" value="99">
+        </div>
+      </div>
+      <div class="col">
+        <div class="input-group">
+          <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1">Total Bottels of AB+</span>
+            </div>
+          <input type="number" name="abp"  required ngModel class="form-control" value="99">
+        </div>
+      </div>
+      <div class="col">
+          <div class="input-group">
+          <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">Total Bottels of O+</span>
+              </div>
+            <input type="number" name="op"  required ngModel class="form-control" value="99">
+          </div>
+        </div>
+      <div class="col">
+        <div class="input-group">
+        <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">Total Bottels of A-</span>
+              </div>
+          <input type="number" name="an"  required ngModel class="form-control" value="99">
+        </div>
+      </div>
+      <div class="col">
+          <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">Total Bottels of B-</span>
+              </div>
+            <input type="number" name="bn"  required ngModel class="form-control" value="99">
+          </div>
+        </div>
+      <div class="col">
+        <div class="input-group">
+          <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">Total Bottels of AB-</span>
+              </div>
+          <input type="number" name="abn"  required ngModel class="form-control" value="99">
+        </div>
+      </div>
+      <div class="col">
+          <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">Total Bottels of O- </span>
+              </div>
+            <input type="number" name="on"  required ngModel class="form-control" value="99">
+          </div>
+        </div>
+        <button type="submit" class="btn btn-success float-right mt-1" >{{Bloodservice.canSee ? "Save" : "Update"}}</button>
+</form>
+
+</div>

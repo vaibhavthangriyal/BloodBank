@@ -1,0 +1,29 @@
+<div class="container-fluid">
+
+  <div class="row bg-primary rounded">
+    <h1 class="text-center">Required Blood</h1>
+  </div>
+
+  <div mwlDraggable (dragEnd)="dragEnd(requiredBottels)">
+      <div class="row mt-2">
+          <div class="col-lg-8 bg-success  rounded border border-danger">
+            <p class="text-center">Blood Required</p>
+          </div>
+          <div class="col">
+              <select class="col" [(ngModel)]="bankService.selectedType" (change)="onSelect(bankService.selectedType)">
+                  <option *ngFor="let type of bankService.bloodType" [value]="type.id"  >{{type.name}}</option>
+      
+                </select>
+          </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8 bg-success rounded border border-danger">
+              <p class="text-center">Number of Bottels</p>
+            </div>
+            <div class="col-4 form-control">
+              <input type="number" name="number" id="" class="form-group" [(ngModel)]="requiredBottels" (change)="onSelect(bankService.selectedType)"
+              >
+            </div>
+          </div>
+  </div>  
+</div>

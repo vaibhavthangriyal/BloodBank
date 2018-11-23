@@ -1,0 +1,21 @@
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-12">
+        <ng-template [ngIf]="BloodService.canSee">
+            <app-blood-bank></app-blood-bank>
+        </ng-template>
+        <ng-template [ngIf]="!BloodService.canSee">
+          <h1>Add Data to continue...</h1>
+        </ng-template>
+      </div>
+    </div>
+    <hr>
+    <div class="row my-2">
+        <div class="col-lg-7 ">
+          <app-patient-record></app-patient-record>
+        </div>
+        <div class="col-lg-5">
+          <app-bucket></app-bucket>
+        </div>
+      </div>
+    </div>    

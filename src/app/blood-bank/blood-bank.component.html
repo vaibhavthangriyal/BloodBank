@@ -1,0 +1,69 @@
+<h1 class="text-center">Blood Bank</h1>
+<div class="card-deck">
+
+  <div 
+  class="card bg-success text-right" 
+    [ngClass]="BloodService.Ngclass(0)"     >
+    <img class="card-img-top " src="../../assets/A+.png" alt="A+">
+    <div class="card-img-overlay">
+        <h1 class="card-text ">{{BloodService.bloodType[0].amount}}
+        </h1>
+    </div>
+  </div>
+
+  <div 
+  class="card bg-success text-right" 
+  [ngClass]="BloodService.bloodType[1].canDonate ? 'bg-success' : 'bg-danger'"
+  >
+    <img class="card-img-top" src="../../assets/B+.png" alt="B+">
+    <div class="card-img-overlay">
+        <h1 class="card-text ">{{BloodService.bloodType[1].amount}}</h1>
+    </div>
+  </div>
+
+  <div class="card bg-success text-right" [ngClass]="BloodService.bloodType[2].canDonate ? 'bg-success' : 'bg-danger'">
+    <img class="card-img-top" src="../../assets/AB+.png" alt="O+">
+    <div class="card-img-overlay">
+        <h1 class="card-text">{{BloodService.bloodType[2].amount}}</h1>
+    </div>
+  </div>
+
+  <div class="card bg-success text-right" [ngClass]="BloodService.bloodType[3].canDonate ? 'bg-success' : 'bg-danger'">
+      <img class="card-img-top" src="../../assets/O+.png" alt="AB+">
+      <div class="card-img-overlay">
+          <h1 class="card-text ">{{BloodService.bloodType[3].amount}}</h1>
+      </div>
+    </div>
+
+</div>
+
+<div class="card-deck mt-1 ">
+
+    <div class="card bg-success text-right" [ngClass]="BloodService.bloodType[4].canDonate ? 'bg-success' : 'bg-danger'">
+      <img class="card-img-top" src="../../assets/A-.png" alt="A-">
+      <div class="card-img-overlay">
+          <h1 class="card-text ">{{BloodService.bloodType[4].amount}}</h1>
+      </div>
+    </div>
+
+    <div class="card bg-success text-right" [ngClass]="BloodService.bloodType[5].canDonate ? 'bg-success' : 'bg-danger'">
+      <img class="card-img-top" src="../../assets/B-.png" alt="B-">
+      <div class="card-img-overlay">
+          <h1 class="card-text ">{{BloodService.bloodType[5].amount}}</h1>
+      </div>
+    </div>
+
+    <div class="card bg-success text-right" [ngClass]="BloodService.bloodType[6].canDonate ? 'bg-success' : 'bg-danger'">
+      <img class="card-img-top" src="../../assets/AB-.png" alt="O-">
+      <div class="card-img-overlay">
+          <h1 class="card-text">{{BloodService.bloodType[6].amount}}</h1>
+      </div>
+    </div>
+
+    <div class="card bg-success text-right" [ngClass]="BloodService.bloodType[7].canDonate ? 'bg-success' : 'bg-danger'">
+      <img class="card-img-top rounded-circle" src="../../assets/O-.png" alt="AB-">
+      <div class="card-img-overlay">
+          <h1 class="card-text ">{{BloodService.bloodType[7].amount}}</h1>
+      </div>
+    </div>
+  </div>
